@@ -1,6 +1,6 @@
 # Continuous Integration example for Python
 
-![Build status](https://travis-ci.org/dacb/codebase.svg?branch=master)]
+![Build status](https://travis-ci.org/dacb/codebase.svg?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/dacb/codebase/badge.svg?branch=master)](https://coveralls.io/github/dacb/codebase?branch=master)
 
 ### To get started
