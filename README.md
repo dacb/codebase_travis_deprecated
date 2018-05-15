@@ -1,5 +1,6 @@
 # Continuous Integration example for Python
 
+![Build status](https://travis-ci.org/dacb/codebase.svg?branch=master, "Build status")
 
 ### To get started
 * Go to https://travis-ci.org/ and sign using your GitHub account.  Click on the _+_ button next to the list of repositories on the left hand side. Select the repo from the list and enable the service by flipping the slider.
@@ -109,4 +110,5 @@ omit =
 exclude_lines =
     if __name__ == .__main__.:
 ```
-* Now you are ready to go.  
+* Now you are ready to go.  `add` `commit` `push` and it should trigger.
+* You can add pretty status badges to your `README.md` by following these instructions: https://docs.travis-ci.com/user/status-images/
