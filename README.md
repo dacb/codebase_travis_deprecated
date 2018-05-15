@@ -1,6 +1,7 @@
 # Continuous Integration example for Python
 
-![Build status](https://travis-ci.org/dacb/codebase.svg?branch=master, "Build status")
+![Build status](https://travis-ci.org/dacb/codebase.svg?branch=master)]
+[![Coverage Status](https://coveralls.io/repos/github/dacb/codebase/badge.svg?branch=master)](https://coveralls.io/github/dacb/codebase?branch=master)
 
 ### To get started
 * Go to https://travis-ci.org/ and sign using your GitHub account.  Click on the _+_ button next to the list of repositories on the left hand side. Select the repo from the list and enable the service by flipping the slider.
@@ -110,5 +111,6 @@ omit =
 exclude_lines =
     if __name__ == .__main__.:
 ```
+* You can add a build status badge to your `README.md` by following these instructions: https://docs.travis-ci.com/user/status-images/
+* If you used this template, you will also have coverage data that you can get a badge for.  To do that, sign in to https://coveralls.io with your GitHub account.  On the left hand side select _ADD REPOS_ and flip the slider switch for the repo you want.  Look for the box at the bottom of the page labeled _BADGE YOUR REPO: CODEBASE_ and click the _EMBED_ button to get a list of the ways to embed and copy the markdown one and paste it in your README.
 * Now you are ready to go.  `add` `commit` `push` and it should trigger.
-* You can add pretty status badges to your `README.md` by following these instructions: https://docs.travis-ci.com/user/status-images/
