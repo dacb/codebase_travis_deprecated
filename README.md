@@ -94,6 +94,9 @@ branches:
       - master
       - stable
 ```
+  * _Special note_: Note that for historical reasons .travis.yml needs to be present on all active branches of your project.
+  * A build will be skipped if the following text appears in a commit message `[skip ci]`
+  * When you specify multiple environment features like python versions or library versions you are creating a matrix of environments to be used for testing.  Each one will be tested separately.
 * Create a `.coveragerc` file that specifies what should be included in the coverage calculations, e.g.
 ```
 [report]
