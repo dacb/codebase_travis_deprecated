@@ -55,15 +55,15 @@ before_install:
     - apt-get install some_os_dependency
 ```
 * The order of build operations is:
- * `before_install`
- * `install`
- * `before_script`
- * `script`
- * `after_success` or `after_failure`
- * OPTIONAL `before_deploy`
- * OPTIONAL `deploy`
- * OPTIONAL `after_deploy`
- * `after_script`
+  * `before_install`
+  * `install`
+  * `before_script`
+  * `script`
+  * `after_success` or `after_failure`
+  * OPTIONAL `before_deploy`
+  * OPTIONAL `deploy`
+  * OPTIONAL `after_deploy`
+  * `after_script`
 * If any of the commands in the first four stages of the build lifecycle return a non-zero exit code, the build is broken:
  * If `before_install`, `install` or `before_script` return a non-zero exit code, the build is errored and stops immediately.
  * If `script` returns a non-zero exit code, the build is failed, but continues to run before being marked as failed.
