@@ -12,6 +12,7 @@
 `pip freeze > requirements.txt`
 * Create a `.travis.yml` file in the root of the repository.  It should have at least the following sections:
 ```
+# what language the build will be configured for
 language: python
 
 # specify what versions of python will be used
