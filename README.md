@@ -65,9 +65,35 @@ before_install:
   * OPTIONAL `after_deploy`
   * `after_script`
 * If any of the commands in the first four stages of the build lifecycle return a non-zero exit code, the build is broken:
- * If `before_install`, `install` or `before_script` return a non-zero exit code, the build is errored and stops immediately.
- * If `script` returns a non-zero exit code, the build is failed, but continues to run before being marked as failed.
- * The exit code of `after_success`, `after_failure`, `after_script` and subsequent stages do not affect the build result. However, if one of these stages times out, the build is marked as a failure.
+  * If `before_install`, `install` or `before_script` return a non-zero exit code, the build is errored and stops immediately.
+  * If `script` returns a non-zero exit code, the build is failed, but continues to run before being marked as failed.
+  * The exit code of `after_success`, `after_failure`, `after_script` and subsequent stages do not affect the build result. However, if one of these stages times out, the build is marked as a failure.
+* Other settings that occasionally come into play include,
+  * How submodules are handled.  By default all submodules are cloned.  If this isn't what you want, you can use:
+```
+git:
+  submodules: false
+```
+  * If you are using Git LFS, you will need to remember to install it and describe how it is used, e.g.
+```
+before_install:
+		- echo -e "machine github.com\n  login $GITHUB_TOKEN" >> ~/.netrc
+		- git lfs pull
+```
+  * Usually, you want to make sure the master branch is tested, but it may be necessary to include or exclude other branches, e.g.
+```
+# blocklist
+branches:
+    except:
+      - legacy
+      - experimental
+
+# safelist
+branches:
+    only:
+      - master
+      - stable
+```
 * Create a `.coveragerc` file that specifies what should be included in the coverage calculations, e.g.
 ```
 [report]
@@ -78,4 +104,4 @@ omit =
 exclude_lines =
     if __name__ == .__main__.:
 ```
-* 
+* Now you are ready to go.  
