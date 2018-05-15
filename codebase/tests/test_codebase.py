@@ -8,7 +8,9 @@ import codebase
 
 data_path = os.path.join(codebase.__path__[0], 'data')
 
+
 class test_Perceptron(unittest.TestCase):
+
     def test_predict(self):
         """
         Testing the perceptron

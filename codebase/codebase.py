@@ -1,7 +1,3 @@
-import os
-
-import pandas as pd
-
 def predict(row, weights):
     """
     Super simple one layer perceptron based on this example:
